@@ -31,7 +31,7 @@ $$
 
 **反向传播的数学本质是链式法则，算法本质是动态规划（填表算法）。**
 
-![diff](E:\Learning\THU\2020 Spring\深度学习\总结\Part2-Basic\diff.png)
+![diff](https://github.com/SerCharles/Deep-Learning-Notes/tree/master/Part2-Basic/diff.png)
 
 比如求上图J对theta1的导数，就要先知道J对z1的导数（残差），再带上z1对theta1的导数。
 
@@ -157,7 +157,7 @@ SGD只随机选用m大小的batch下降，m << n，而且每次会shuffle训练�
 $$
 \Delta_t = \beta \Delta_{t-1} + \bigtriangledown J^t(\theta^t)
 $$
-![momentum](E:\Learning\THU\2020 Spring\深度学习\总结\Part2-Basic\momentum.png)
+![momentum](https://github.com/SerCharles/Deep-Learning-Notes/tree/master/Part2-Basic/momentum.png)
 
 而Nestrov Momentum是先求动量再求梯度，是改进版Momentum，使用其的NGD如下：
 $$
@@ -207,7 +207,7 @@ $$
 
 最常用的是SGD+Momentum和Adam
 
-![optimize](E:\Learning\THU\2020 Spring\深度学习\总结\Part2-Basic\optimize.png)
+![optimize](https://github.com/SerCharles/Deep-Learning-Notes/tree/master/Part2-Basic/optimize.png)
 
 ## 4.最基本的单元：MLP
 
@@ -219,17 +219,17 @@ $$
 
 当x为bool表达式，可以表达逻辑
 
-![logic](E:\Learning\THU\2020 Spring\深度学习\总结\Part2-Basic\logic.png)
+![logic](https://github.com/SerCharles/Deep-Learning-Notes/tree/master/Part2-Basic/logic.png)
 
 单层感知机可以表达且，或，非；多层感知机可以表达任意命题逻辑；
 
 当x为实数，可以表达超平面
 
-![line](E:\Learning\THU\2020 Spring\深度学习\总结\Part2-Basic\line.png)
+![line](https://github.com/SerCharles/Deep-Learning-Notes/tree/master/Part2-Basic/line.png)
 
 当感知机用实数和逻辑组合的时候，可以表达很复杂的图形
 
-![MLP](E:\Learning\THU\2020 Spring\深度学习\总结\Part2-Basic\MLP.png)
+![MLP](https://github.com/SerCharles/Deep-Learning-Notes/tree/master/Part2-Basic/MLP.png)
 
 ### 4.2 表达能力
 
@@ -237,4 +237,4 @@ $$
 
 ## 5.整体思维导图
 
-![mindmap](E:\Learning\THU\2020 Spring\深度学习\总结\Part2-Basic\mindmap.jpg)
+![mindmap](https://github.com/SerCharles/Deep-Learning-Notes/tree/master/Part2-Basic/mindmap.jpg)
