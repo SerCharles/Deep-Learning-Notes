@@ -72,7 +72,7 @@ W为全局的共享参数
 
 ### 2.3 非局部卷积
 
-用途：获取图片中较远距离位置的相关性（类似self attention）
+用途：获取图片中较远距离位置的相关性（self attention）
 $$
 y_i = \frac{1}{l(x)}\sum_{\forall j}f(x_i,x_j)g(x_j)\\
 其中g(x_j)=Wx_j（参数共享，线性映射）\\
