@@ -217,6 +217,7 @@ $$
 
 **实质：求特征图片每两个位置间相似度，也就是非局部卷积**
 $$
+先将特征图片分别做两个1*1卷积（类似不同的线性变换）\\
 y_i = \frac{1}{C(x)}\sum_{\forall j}f(x_i,x_j)g(x_j)\\
 g(x_j)=W_gx_j\\
 f(x_i,x_j)=e^{x_i^Tx_j}(Gaussian)\\
@@ -224,6 +225,8 @@ f(x_i,x_j)=e^{\theta(x_i)^T\phi(x_j)}(Embedded Gaussian)\\
 C(x) = \sum_{\forall j}f(x_i,x_j)正规化因子
 $$
 得到的结果可以被用来加权修改图片
+
+![picture](/picture.png)
 
 #### 2.5.3 其他
 

@@ -164,7 +164,7 @@ h_v^k = \sigma(W_k\sum_{u \in N(v)}\frac{h_u^{k-1}}{N(v)} + B_kh_v^{k-1})
 $$
 ![GNN](/GNN.png)
 
-训练：既可以有监督训练（比如节点分类），**也可以用Random walks来无监督训练**
+训练：既可以有监督训练（比如节点分类），**也可以用Random deep walk来无监督训练**
 
 性质：有**推理能力**，因为**参数共享**，可以轻易将网络用到新的图，或者图的新节点中
 
@@ -200,9 +200,7 @@ Factorization Machine：引入二次线性特征，用矩阵低秩变换降维�
 
 **核心：embedding+神经网络（MLP,Attention）特征学习，损失函数仍然用正负例近似**
 
-DNN：最后用logistic损失函数
-
-DIN：引入Attention机制
+DNN--->DIN：引入Attention机制
 
 #### Tree-Based：
 
@@ -215,11 +213,17 @@ DIN：引入Attention机制
 概率计算：
 $$
 p^{(j(n|u)} = \frac{max_{n_c \in n的子节点}p^{(j+1)}(n_c|u)}{\alpha^{(j)}}\\
-父亲节点的概率由子节点最大的那个概率决定\\
+父亲节点的概率由子节点最大的那个概率决定\\
 $$
-损失函数计算：NCE正负例近似，不过需要所有结点都取正负例--正例是已经点击的商品和其ancestor，负例随机生成。
+损失函数：
+$$
+L = -\sum_{u}\sum_{n\in y_u^+ \bigcup y_u^+ }y_u(n)logP(y^{'}_u(n)=1)+(1-y_u(n))logP(y^{'}_u(n)=0)\\
+其中y_u^+,y_u^-为正例，负例，不仅需要对叶子结点取，也需要对非叶子结点取\\
+$$
+损失函数计算：NCE正负例近似--正例是已经点击的商品和其ancestor，负例随机生成。
 
 ![tree](/tree.png)
 
 ## 4.整体思维导图
 
+![mindmap](/mindmap.jpg)
