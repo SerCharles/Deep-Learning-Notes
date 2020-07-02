@@ -136,9 +136,11 @@ AlphaGo = MTCS + Policy Network（Actor） + Value Network（Critic）
 
 ​	用之前的self_play数据进行监督学习，也是CNN网络
 
-**MTCS（蒙特卡洛树搜索）：**用于选择下棋路径
+**MTCS（蒙特卡洛树搜索）：** **用于选择下棋位置**
 
 ​	选择：
+
+​	选择子节点综合得分最大的
 $$
 a_t = argmax_a(Q(s_t,a) + u(s_t,a))\\
 u(s,a) = \frac{P(s,a)}{1+N(s,a)}
